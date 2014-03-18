@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            startScreen
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/childbrowser.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/panelEvents.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="startScreen" id="startScreen"
+        class="type-interior" data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <!-- mobileheader1 -->
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader1"
+            id="startScreen_mobileheader1" class=' startScreen_mobileheader1 '>
+                <h1 dsid="mobileheader1">
+                    LifehackerRSS
+                </h1>
+            </div>
+            <!-- mobilecontainer1 -->
+            <div data-role="content" id="startScreen_mobilecontainer1" name="mobilecontainer1"
+            class=" startScreen_mobilecontainer1" dsid="mobilecontainer1" data-theme="b">
+                <link href="startScreen.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="startScreen.js">
+                </script>
+                <!-- grid -->
+                <div class="startScreen_grid_wrapper">
+                    <table id="startScreen_grid" class=" startScreen_grid" dsid="grid" name="grid" cellpadding=0
+                    cellspacing=0>
+                        <col style="width:auto;" />
+                        <tr class="startScreen_grid_row_0">
+                            <!-- mobilegridcell_25 -->
+                            <td id="startScreen_mobilegridcell_25" name="mobilegridcell_25" class="startScreen_mobilegridcell_25"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- link -->
+                                    <div class="startScreen_link_link_wrapper">
+                                        <a id="startScreen_link" href="http://appery.io" name="link" dsid="link" data-role="appery_link"
+                                        class=' startScreen_link '>
+                                        Link
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_grid_row_1">
+                            <!-- mobilegridcell_27 -->
+                            <td id="startScreen_mobilegridcell_27" name="mobilegridcell_27" class="startScreen_mobilegridcell_27"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- pubDate -->
+                                    <div name="pubDate" id="startScreen_pubDate" dsid="pubDate" data-role="appery_label"
+                                    class=' startScreen_pubDate '>
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="startScreen_grid_row_2">
+                            <!-- mobilegridcell_29 -->
+                            <td id="startScreen_mobilegridcell_29" name="mobilegridcell_29" class="startScreen_mobilegridcell_29"
+                            colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- description -->
+                                    <div name="description" id="startScreen_description" dsid="description" data-role="appery_label"
+                                    class=' startScreen_description '>
+                                        Label
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" startScreen_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="startScreen_mobilefooter1" data-theme="b">
+            </div>
+        </div>
+    </body>
+
+</html>
